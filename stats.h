@@ -25,19 +25,67 @@
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
-
+struct report{
+    int min, max;
+    float median, mean;
+};
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief prints the statistics of an array
  *
- * <Add Extended Description Here>
+ * prints minimum, maximum, mean, and median
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param struct report contains statistics
  */
-
+void print_statistics(struct report);
+/**
+ * @brief prints an array
+ *
+ * @param char[] contains input data
+ * @param len length of input array
+ */
+void print_array(unsigned char[], int);
+/**
+ * @brief finds the median of an array
+ *
+ * @param char[] contains input data
+ * @param len length of input data
+ *
+ * @return float median of the array
+ */
+float find_median(unsigned char[], int);
+/**
+ * @brief finds the mean of an array
+ *
+ * @param char[] contains input data
+ * @param len length of input data
+ *
+ * @return float mean of the array
+ */
+float find_mean(unsigned char[], int);
+/**
+ * @brief finds the max of an array
+ *
+ * @param char[] contains input data
+ * @param len length of input data
+ *
+ * @return int max of the array
+ */
+int find_maximum(unsigned char[], int);
+/**
+ * @brief finds the min of an array
+ *
+ * @param char[] contains input data
+ * @param len length of input data
+ *
+ * @return int min of the array
+ */
+int find_minimum(unsigned char[], int);
+/**
+ * @brief sorts the array from greatest to least
+ *
+ * @param char[] contains input data
+ * @param len length of input data
+ */
+void sort_array(unsigned char[], int);
 
 #endif /* __STATS_H__ */
